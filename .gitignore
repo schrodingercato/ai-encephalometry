@@ -1,0 +1,27 @@
+# Python / TensorFlow
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+
+# Project Specific (JANGAN UPLOAD FILE SUPER BESAR KE GITHUB YA!)
+models/*.h5
+models/*.weights
+datasets/
+logs/
+
+# Frontend Node.JS
+node_modules/
+dist/
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
