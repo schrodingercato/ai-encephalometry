@@ -1,4 +1,4 @@
-from data import ISBIDataset, PKUDataset, AarizDataset
+from data import ISBIDataset, PKUDataset, AarizDataset, Cepha400Dataset
 from preprocessing import Augmentation
 from paths import Paths
 import tensorflow as tf
@@ -31,12 +31,15 @@ class Dataset(tf.keras.utils.Sequence):
         shuffle: bool = False,
     ):
 
+        dataset_path = Paths.dataset_root_path(name)
         if name == "isbi":
-            self.dataset = ISBIDataset(Paths.dataset_root_path(name), mode)
+            self.dataset = ISBIDataset(dataset_path, mode)
         elif name == "pku":
-            self.dataset = PKUDataset(Paths.dataset_root_path(name), mode)
+            self.dataset = PKUDataset(dataset_folder_path=dataset_path, mode=mode)
         elif name == "aariz":
-            self.dataset = AarizDataset(Paths.dataset_root_path(name), mode)
+            self.dataset = AarizDataset(dataset_folder_path=dataset_path, mode=mode)
+        elif name == "cepha400":
+            self.dataset = Cepha400Dataset(dataset_folder_path=dataset_path, mode=mode)
         else:
             raise ValueError("\'{}\' no such dataset exists in your datasets repository.".format(name))
 

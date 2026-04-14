@@ -145,7 +145,7 @@ if __name__ == "__main__":
     from config import cfg
 
     parser = argparse.ArgumentParser(description="CEPHMark-Net Training")
-    parser.add_argument("--dataset", type=str, default="aariz", choices=["isbi", "aariz", "pku"], help="Dataset to train on")
+    parser.add_argument("--dataset", type=str, default="cepha400", choices=["isbi", "aariz", "pku", "cepha400"], help="Dataset to train on")
     parser.add_argument("--max-images", type=int, default=0, help="Set angka untuk melimitasi training ke X gambar")
     args = parser.parse_args()
 

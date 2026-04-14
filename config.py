@@ -55,7 +55,7 @@ config.ANATOMICAL_LANDMARKS = {
 }
 
 # number of cephalometric landmarks
-config.NUM_LANDMARKS = 29
+config.NUM_LANDMARKS = 19
 
 
 config.BACKBONE_BLOCKS_INFO = {

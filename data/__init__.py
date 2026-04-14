@@ -1,6 +1,7 @@
 from data.isbi_dataset import ISBIDataset
 from data.pku_dataset import PKUDataset
 from data.aariz_dataset import AarizDataset
+from data.cepha400_dataset import Cepha400Dataset
 from data.dataset import Dataset
 from config import cfg
 

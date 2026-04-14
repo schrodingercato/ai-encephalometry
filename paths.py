@@ -16,6 +16,8 @@ class Paths(object):
             return "./datasets/ISBI Dataset"
         elif name == "pku":
             return "./datasets/PKU Dataset"
+        elif name == "cepha400":
+            return "./datasets/cepha400"
         elif name == "aariz":
             return "./datasets/Aariz"
         else:

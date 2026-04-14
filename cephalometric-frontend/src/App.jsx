@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import UploadPage from './pages/UploadPage';
 import ResultPage from './pages/ResultPage';
-import { callAPI } from './utils/dummyData';
+import { DUMMY_ANGLES } from './utils/dummyData';
 import { Stethoscope } from 'lucide-react';
 
 function App() {
@@ -30,7 +30,10 @@ function App() {
       
       setAnalysisState({
         imageSrc: previewUrl,
-        results: liveData.landmarks
+        results: {
+          landmarks: liveData.landmarks, // Titik dari AI Asli
+          measurements: DUMMY_ANGLES     // Sudut dummy sementara (fitur sudut angle AI belum dibuat)
+        }
       });
       setCurrentPage('result');
       
